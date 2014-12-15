@@ -1,0 +1,9 @@
+<form action="/todos" method="post">
+  Create new todo: <input type="text" name="todo">
+  <button id="save_todo">Save</button>
+</form>
+<ul id="todos">
+  {{#each todos}}
+    <li>{{body}}&nbsp; <a href="/destroy/{{id}}">remove</a></li>
+  {{/each}}
+</ul>
